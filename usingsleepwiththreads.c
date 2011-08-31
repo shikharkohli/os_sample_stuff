@@ -1,12 +1,13 @@
-//Experiment inconclusive as of now
+//Sleeps pauses the thread, not the process.
 #include<stdio.h>
 #include<pthread.h>
 #include<unistd.h>
+#include<stdlib.h>
 
 void printalot()
 {
     int i=1;
-    while(i<10) {
+    while(1) {
         printf("Hi! I am %d \n",i++);
     }
 }
@@ -15,7 +16,7 @@ void sleepalot()
 {
     printf("I am about to sleep...\n");
     sleep(10);
-    printf("And I'm up already!\n");
+    printf("And I'm up already!\n");exit(0);
 }
 
 int main()
